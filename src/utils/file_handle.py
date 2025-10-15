@@ -14,9 +14,13 @@ class FileHandle:
 
     @staticmethod
     def create_file(ruta, nombre_archivo, contenido):
-        """ Crear un archivo si no existe """
+        """ Crear un archivo """
         path = os.path.join(ruta, nombre_archivo)
-        with open(path, "x") as f:
-            f.write(contenido)
-        print("Archivo %s creado!" % nombre_archivo)
-        return True
+        try:
+            with open(path, "x") as f:
+                f.write(contenido)
+            print("Archivo %s creado!" % nombre_archivo)
+            return True
+        except FileExistsError:
+            print("Archivo %s ya existe, no se crea." % nombre_archivo)
+            return False
