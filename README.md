@@ -60,8 +60,47 @@ proyecto/
 ├── README.md
 ├── docker-compose.yml
 └── Dockerfile
-
-
-
-
 ```
+
+## Carpetas y archivos por servicios:
+
+### Mongodb:
+#### Carpeta data:
+```
+./src/data/extractors/mongodb_extractor.py
+./src/data/loaders/mongodb_loader.py
+./src/data/transformers/mongodb_transformer.py
+```
+
+#### Carpeta services
+```
+./src/services/mongodb_service.py
+```
+
+### Google sheets:
+#### Carpeta Data
+```
+./src/data/extractors/google_sheets_extractor.py
+./src/data/loaders/google_sheets_loader.py
+./src/data/transformers/google_sheets_transformer.py
+```
+
+
+#### Carpeta config
+```
+./config/google_sheet_config.yaml
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
