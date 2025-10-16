@@ -65,6 +65,12 @@ proyecto/
 ## Carpetas y archivos por servicios:
 
 ### Mongodb:
+
+#### Carpeta config
+```
+./config/mongodb_config.py
+```
+
 #### Carpeta data:
 ```
 ./src/data/extractors/mongodb_extractor.py
